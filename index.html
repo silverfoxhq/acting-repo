@@ -148,26 +148,33 @@
     <a href="mailto:addbriggs2@gmail.com" class="btn">Contact Me</a>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const images = document.querySelectorAll(".carousel img");
-      let index = 0;
-      images[index].style.display = "block";
-      const prevButton = document.getElementById("prev");
-      const nextButton = document.getElementById("next");
-      
-      prevButton.addEventListener("click", function() {
-        images[index].style.display = "none";
-        index = (index - 1 + images.length) % images.length;
-        images[index].style.display = "block";
-      });
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".carousel img");
+    let index = 0;
 
-      nextButton.addEventListener("click", function() {
-        images[index].style.display = "none";
-        index = (index + 1) % images.length;
-        images[index].style.display = "block";
+    function showImage(idx) {
+      images.forEach((img, i) => {
+        img.style.display = i === idx ? "block" : "none";
       });
+    }
+
+    showImage(index); // Show the first image initially
+
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+
+    prevButton.addEventListener("click", function() {
+      index = (index - 1 + images.length) % images.length;
+      showImage(index);
     });
+
+    nextButton.addEventListener("click", function() {
+      index = (index + 1) % images.length;
+      showImage(index);
+    });
+  });
+</script>
   </script>
 </body>
 </html>
