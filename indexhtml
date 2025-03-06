@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Briggs - Acting Profile</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Special Elite', cursive;
+      background-color: #f0ead6; /* Eggshell white */
+      color: #2e2b26; /* Blackish brown */
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header {
+      background: #2e2b26;
+      color: #f0ead6;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .tagline {
+      font-family: 'Special Elite', cursive;
+      font-size: 1.8rem;
+      color: #2e2b26;
+      margin-top: 15px;
+      font-style: italic;
+    }
+
+    .carousel {
+      position: relative;
+      max-width: 600px;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .carousel img {
+      width: 100%;
+      display: none;
+      border-radius: 15px;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background: rgba(46, 43, 38, 0.7);
+      color: #f0ead6;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      transition: background 0.3s;
+    }
+
+    .carousel-buttons button:hover {
+      background: rgba(46, 43, 38, 1);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #2e2b26;
+      color: #f0ead6;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      background-color: #4a4237;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Add Briggs
+    <p class="tagline">Actor, I am Become!</p>
+  </header>
+
+  <div class="container">
+    <div class="carousel">
+      <img src="https://drive.google.com/uc?export=view&id=1GEzC7Q7tBdrwfH5z6nLkq1iggmavsJXG" alt="Scene Performance">
+      <img src="https://drive.google.com/uc?export=view&id=1JjNQHTKuQ4V_Vhsjk-WmHUPuSnblv2Lt" alt="Behind the Scenes">
+      <img src="https://drive.google.com/uc?export=view&id=1KE0q5NHT0wQYNjd1p64nHpgN8gXk0E6O" alt="Dramatic Role">
+      <img src="https://drive.google.com/uc?export=view&id=199ZYi4QlHPiUJEr7qjFThmcvVO6-EaAj" class="active" alt="Acting Photo">
+      <img src="https://drive.google.com/uc?export=view&id=16BmeU17xqFbK5ikrj_zngBknu4DPKL_s" alt="Comedy Photo">
+      <img src="https://drive.google.com/uc?export=view&id=1TFH2HidjNWIr3f8HK1FcNQgy1F5zDsMy" alt="Improv Photo">
+      <img src="https://drive.google.com/uc?export=view&id=1G0Hr9C2Gdc6Sdp5EOPDfGJYNCgoYKOTx" alt="Stage Performance">
+      <img src="https://drive.google.com/uc?export=view&id=1CPpqTY4W9XGIDy3AyxnXzBEKP3G9YVUM" alt="Character Role">
+      <img src="https://drive.google.com/uc?export=view&id=1lSBVfYJF_4I05O5vMbqXgmOue-wY149z" alt="Theater Scene">
+      <img src="https://drive.google.com/uc?export=view&id=15_Xk0c8qagVlB36zgt6UdJ_t4D7pJVOZ" alt="Stand-Up Performance">
+      <div class="carousel-buttons">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+    </div>
+    
+    <h2>Acting Credits</h2>
+    <ul>
+      <li>Paul in <em>Murder at the Howard Johnson’s</em></li>
+      <li>Rod in <em>Calendar Girls</em></li>
+      <li>George in <em>Drinking Habits</em></li>
+      <li>Multiple Orlando improv group performances</li>
+      <li>Stand-up comedy at SAK Comedy Lab and various Orlando venues</li>
+      <li>Frequent guest & collaborator on <em>HellthyJunkFood</em> (3M+ subscribers) and spin-offs <em>StreamThis</em> & <em>JPLaughs</em></li>
+      <li>Special thanks to <a href="https://www.harpoon.media" target="_blank">Harpoon Media</a> for their support</li>
+    </ul>
+    
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:addbriggs2@gmail.com">addbriggs2@gmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/addbriggs?igsh=ejBxcnBxeXJoejAw&utm_source=qr" target="_blank">@addbriggs</a></p>
+    
+    <a href="mailto:addbriggs2@gmail.com" class="btn">Contact Me</a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll(".carousel img");
+      let index = 0;
+      const prevButton = document.getElementById("prev");
+      const nextButton = document.getElementById("next");
+      
+      prevButton.addEventListener("click", function() {
+        images[index].classList.remove("active");
+        index = (index - 1 + images.length) % images.length;
+        images[index].classList.add("active");
+      });
+
+      nextButton.addEventListener("click", function() {
+        images[index].classList.remove("active");
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
