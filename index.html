@@ -57,6 +57,7 @@
 
     .carousel img {
       width: 100%;
+      display: none;
       border-radius: 15px;
     }
 
@@ -113,10 +114,10 @@
 
   <div class="container">
     <div class="carousel">
-      <img src="IMG_1450.jpg" alt="Scene Performance">
+      <img src="IMG_1450.jpg" class="active" alt="Scene Performance">
       <img src="IMG_2880.PNG" alt="Behind the Scenes">
       <img src="IMG_4521.PNG" alt="Dramatic Role">
-      <img src="IMG_8543.PNG" class="active" alt="Acting Photo">
+      
       <img src="IMG_8783.PNG" alt="Comedy Photo">
       <img src="IMG_8785.PNG" alt="Improv Photo">
       <img src="IMG_8786.PNG" alt="Stage Performance">
@@ -151,19 +152,20 @@
     document.addEventListener("DOMContentLoaded", function() {
       const images = document.querySelectorAll(".carousel img");
       let index = 0;
+      images[index].style.display = "block";
       const prevButton = document.getElementById("prev");
       const nextButton = document.getElementById("next");
       
       prevButton.addEventListener("click", function() {
-        images[index].classList.remove("active");
+        images[index].style.display = "none";
         index = (index - 1 + images.length) % images.length;
-        images[index].classList.add("active");
+        images[index].style.display = "block";
       });
 
       nextButton.addEventListener("click", function() {
-        images[index].classList.remove("active");
+        images[index].style.display = "none";
         index = (index + 1) % images.length;
-        images[index].classList.add("active");
+        images[index].style.display = "block";
       });
     });
   </script>
