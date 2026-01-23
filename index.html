@@ -1,180 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Add Briggs - Acting Profile</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aaron Briggs - Film Marketing Professional & Performing Artist based in Sarasota, FL. Campaign strategy, audience development, and on-camera talent.">
+    <meta name="keywords" content="film marketing, movie marketing, actor, performer, Orlando, entertainment marketing, campaign strategy">
+    <meta name="author" content="Aaron Briggs">
 
-    body {
-      font-family: 'Special Elite', cursive;
-      background-color: #f0ead6;
-      color: #2e2b26;
-      line-height: 1.6;
-    }
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aaron Briggs | Film Marketing & Performance">
+    <meta property="og:description" content="Film marketing professional and performing artist. One Stop Shop For Fan Edits">
+    <meta property="og:image" content="assets/images/headshot.jpg">
+    <meta property="og:url" content="https://addbriggs.com">
 
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aaron Briggs | Film Marketing & Performance">
+    <meta name="twitter:description" content="Film marketing professional and performing artist. One Stop Shop For Fan Edits">
 
-    header {
-      background: #2e2b26;
-      color: #f0ead6;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
+    <title>Aaron Briggs | Film Marketing & Performance</title>
 
-    .tagline {
-      font-family: 'Special Elite', cursive;
-      font-size: 1.8rem;
-      color: #2e2b26;
-      margin-top: 15px;
-      font-style: italic;
-    }
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    .carousel {
-      position: relative;
-      max-width: 600px;
-      margin: 30px auto;
-      overflow: hidden;
-      border-radius: 15px;
-    }
-
-    .carousel img {
-      width: 100%;
-      display: none;
-      border-radius: 15px;
-    }
-
-    .carousel img.active {
-      display: block;
-    }
-
-    .carousel-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-    }
-
-    .carousel-buttons button {
-      background: rgba(46, 43, 38, 0.7);
-      color: #f0ead6;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      font-size: 1.5rem;
-      transition: background 0.3s;
-    }
-
-    .carousel-buttons button:hover {
-      background: rgba(46, 43, 38, 1);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: #2e2b26;
-      color: #f0ead6;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-      text-transform: uppercase;
-      transition: transform 0.3s, background 0.3s;
-    }
-
-    .btn:hover {
-      transform: scale(1.1);
-      background-color: #4a4237;
-    }
-  </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    Add Briggs
-    <p class="tagline">Actor, I am Become!</p>
-  </header>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">AB</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#campaigns">Campaigns</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <div class="container">
-    <div class="carousel">
-      <img src="IMG_1450.jpg" class="active" alt="Scene Performance">
-      <img src="IMG_2880.PNG" alt="Behind the Scenes">
-      <img src="IMG_4521.PNG" alt="Dramatic Role">
-      
-      <img src="IMG_8783.PNG" alt="Comedy Photo">
-      <img src="IMG_8785.PNG" alt="Improv Photo">
-      <img src="IMG_8786.PNG" alt="Stage Performance">
-      <img src="IMG_8789.PNG" alt="Character Role">
-      <img src="IMG_8791.PNG" alt="Theater Scene">
-      <img src="IMG_8793.PNG" alt="Stand-Up Performance">
-      <div class="carousel-buttons">
-        <button id="prev">&#10094;</button>
-        <button id="next">&#10095;</button>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-image-wrapper">
+                <img src="assets/images/headshot.jpg" alt="Aaron Briggs - Film Marketing Professional and Performer" class="hero-image">
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-name">Aaron Briggs</h1>
+                <p class="hero-tagline">One Stop Shop For Fan Edits</p>
+                <p class="hero-subtitle">Film Marketing & Live Performance</p>
+                <div class="hero-cta">
+                    <a href="#campaigns" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+
+    <!-- Film Campaigns Section -->
+    <section class="campaigns" id="campaigns">
+        <div class="container">
+            <h2 class="section-label">Film Marketing</h2>
+            <h3 class="section-title">Campaign Portfolio</h3>
+            <p class="section-intro">Marketing campaigns for feature films spanning action, thriller, horror, and comedy-drama. Each project required understanding the unique audience and crafting visuals that cut through the noise.</p>
+
+            <div class="campaign-grid">
+                <div class="campaign-card" data-film="fight-or-flight" data-example="assets/images/examples/fight-or-flight.png">
+                    <div class="campaign-poster">
+                        <img src="assets/images/campaigns/fight-or-flight.jpg" alt="Fight or Flight movie poster">
+                        <div class="campaign-overlay">
+                            <span class="view-label">View Example</span>
+                        </div>
+                    </div>
+                    <div class="campaign-info">
+                        <h4>Fight or Flight</h4>
+                        <p class="campaign-meta">Josh Hartnett | From the Producers of John Wick</p>
+                    </div>
+                </div>
+
+                <div class="campaign-card" data-film="the-surfer" data-example="assets/images/examples/the-surfer.png">
+                    <div class="campaign-poster">
+                        <img src="assets/images/campaigns/the-surfer.jpg" alt="The Surfer movie poster">
+                        <div class="campaign-overlay">
+                            <span class="view-label">View Example</span>
+                        </div>
+                    </div>
+                    <div class="campaign-info">
+                        <h4>The Surfer</h4>
+                        <p class="campaign-meta">Nicolas Cage | Cannes Film Festival Selection</p>
+                    </div>
+                </div>
+
+                <div class="campaign-card" data-film="bob-trevino" data-example="assets/images/examples/bob-trevino.png">
+                    <div class="campaign-poster">
+                        <img src="assets/images/campaigns/bob-trevino-likes-it.jpg" alt="Bob Trevino Likes It movie poster">
+                        <div class="campaign-overlay">
+                            <span class="view-label">View Example</span>
+                        </div>
+                    </div>
+                    <div class="campaign-info">
+                        <h4>Bob Trevino Likes It</h4>
+                        <p class="campaign-meta">John Leguizamo | SXSW Winner - 13 Audience Awards</p>
+                    </div>
+                </div>
+
+                <div class="campaign-card" data-film="osiris" data-example="assets/images/examples/osiris.png">
+                    <div class="campaign-poster">
+                        <img src="assets/images/campaigns/osiris.jpg" alt="Osiris movie poster">
+                        <div class="campaign-overlay">
+                            <span class="view-label">View Example</span>
+                        </div>
+                    </div>
+                    <div class="campaign-info">
+                        <h4>Osiris</h4>
+                        <p class="campaign-meta">Linda Hamilton, Max Martini | Dir. William Kaufman</p>
+                    </div>
+                </div>
+
+                <div class="campaign-card" data-film="the-wrecker" data-example="assets/images/examples/the-wrecker.png">
+                    <div class="campaign-poster">
+                        <img src="assets/images/campaigns/the-wrecker.jpg" alt="The Wrecker movie poster">
+                        <div class="campaign-overlay">
+                            <span class="view-label">View Example</span>
+                        </div>
+                    </div>
+                    <div class="campaign-info">
+                        <h4>The Wrecker</h4>
+                        <p class="campaign-meta">Tyrese Gibson, Harvey Keitel, Mena Suvari</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="performance" id="performance">
+        <div class="container">
+            <h2 class="section-label">Performance</h2>
+            <h3 class="section-title">Stage & Screen</h3>
+
+            <div class="performance-content">
+                <div class="credits-section">
+                    <h4 class="credits-heading">Theater Credits</h4>
+                    <div class="credits-list">
+                        <div class="credit-item">
+                            <span class="role">Paul</span>
+                            <span class="production">Murder at the Howard Johnson's</span>
+                        </div>
+                        <div class="credit-item">
+                            <span class="role">Rod</span>
+                            <span class="production">Calendar Girls</span>
+                        </div>
+                        <div class="credit-item">
+                            <span class="role">George</span>
+                            <span class="production">Drinking Habits</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credits-section">
+                    <h4 class="credits-heading">Comedy & Improv</h4>
+                    <div class="credits-list">
+                        <div class="credit-item">
+                            <span class="venue">SAK Comedy Lab</span>
+                            <span class="type">Stand-up Comedy</span>
+                        </div>
+                        <div class="credit-item">
+                            <span class="venue">Orlando Improv Groups</span>
+                            <span class="type">Improv Performance</span>
+                        </div>
+                        <div class="credit-item">
+                            <span class="venue">Various Orlando Venues</span>
+                            <span class="type">Stand-up Comedy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credits-section featured">
+                    <h4 class="credits-heading">Digital Collaborations</h4>
+                    <div class="collab-card">
+                        <div class="collab-info">
+                            <h5>HellthyJunkFood</h5>
+                            <p class="collab-reach">3M+ Subscribers</p>
+                            <p class="collab-desc">Frequent guest and collaborator on this major YouTube channel, plus appearances on spin-off shows StreamThis and JPLaughs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reel-placeholder">
+                    <div class="reel-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                    <p>Performance Reel Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-label">Contact</h2>
+            <h3 class="section-title">Let's Create Something Together</h3>
+            <p class="contact-intro">Whether you're looking for marketing expertise, on-camera talent, or creative collaboration—I'd love to hear about your project.</p>
+
+            <div class="contact-content">
+                <div class="contact-methods">
+                    <a href="mailto:addbriggs2@gmail.com" class="contact-method">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">addbriggs2@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://instagram.com/addbriggs" target="_blank" rel="noopener noreferrer" class="contact-method">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Instagram</span>
+                            <span class="contact-value">@addbriggs</span>
+                        </div>
+                    </a>
+                </div>
+
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">Aaron Briggs</p>
+                <p class="footer-tagline">Film Marketing & Performance</p>
+                <div class="footer-affiliate">
+                    <span>Affiliated with</span>
+                    <strong>Harpoon Media</strong>
+                </div>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Aaron Briggs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox for Campaign Posters -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img src="" alt="" class="lightbox-image">
     </div>
-    
-    <h2>Acting Credits</h2>
-    <ul>
-      <li>Paul in <em>Murder at the Howard Johnson’s</em></li>
-      <li>Rod in <em>Calendar Girls</em></li>
-      <li>George in <em>Drinking Habits</em></li>
-      <li>Multiple Orlando improv group performances</li>
-      <li>Stand-up comedy at SAK Comedy Lab and various Orlando venues</li>
-      <li>Frequent guest & collaborator on <em>HellthyJunkFood</em> (3M+ subscribers) and spin-offs <em>StreamThis</em> & <em>JPLaughs</em></li>
-      <li>Special thanks to <a href="https://www.harpoon.media" target="_blank">Harpoon Media</a> for their support</li>
-    </ul>
-    
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:addbriggs2@gmail.com">addbriggs2@gmail.com</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/addbriggs?igsh=ejBxcnBxeXJoejAw&utm_source=qr" target="_blank">@addbriggs</a></p>
-    
-    <a href="mailto:addbriggs2@gmail.com" class="btn">Contact Me</a>
-  </div>
 
- <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll(".carousel img");
-    let index = 0;
-
-    function showImage(idx) {
-      images.forEach((img, i) => {
-        img.style.display = i === idx ? "block" : "none";
-      });
-    }
-
-    showImage(index); // Show the first image initially
-
-    const prevButton = document.getElementById("prev");
-    const nextButton = document.getElementById("next");
-
-    prevButton.addEventListener("click", function() {
-      index = (index - 1 + images.length) % images.length;
-      showImage(index);
-    });
-
-    nextButton.addEventListener("click", function() {
-      index = (index + 1) % images.length;
-      showImage(index);
-    });
-  });
-</script>
-  </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
