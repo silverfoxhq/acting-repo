@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Briefly Obsessed — organic film marketing and creator campaigns for indie and studio releases. Word-of-mouth buzz, viral clipping, measurable engagement.">
+    <meta name="description" content="Briefly Obsessed, organic film marketing and creator campaigns for indie and studio releases. Word-of-mouth buzz, viral clipping, measurable engagement.">
     <meta name="keywords" content="film marketing, movie marketing, organic social, influencer marketing, clipping content, indie film">
     <meta name="author" content="Briefly Obsessed">
     <meta property="og:type" content="website">
@@ -17,250 +17,287 @@
     <title>Briefly Obsessed | Organic Film Marketing</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">Briefly Obsessed</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#work">Work</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#clients">Clients</a></li>
-                <li><a href="#contact" class="nav-cta">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="ocean-zone" id="oceanZone">
+        <div class="ocean-bg" aria-hidden="true"></div>
+        <div class="bubbles-layer" id="bubblesLayer" aria-hidden="true"></div>
 
-    <section class="hero" id="hero">
-        <div class="container hero-inner">
-            <p class="hero-eyebrow">Film marketing agency</p>
-            <h1 class="hero-title">Turn your film into<br>the thing people<br>can't stop talking about.</h1>
-            <p class="hero-lead">Briefly Obsessed builds organic creator campaigns for indie and studio releases — flooding feeds with authentic clips, word-of-mouth momentum, and engagement you can actually measure.</p>
-            <a href="#contact" class="btn btn-primary">Start a campaign</a>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <span class="hero-stat-value">10M+</span>
-                    <span class="hero-stat-label">Organic views</span>
+        <nav class="nav" id="nav">
+            <div class="nav-container">
+                <a href="#hero" class="nav-logo">Briefly Obsessed</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="hero" id="hero">
+            <div class="container hero-inner">
+                <p class="hero-eyebrow">Film marketing agency</p>
+                <h1 class="hero-title">Turn your film into<br>the thing people<br>can't stop talking about.</h1>
+                <p class="hero-lead">Briefly Obsessed builds organic creator campaigns for indie and studio releases, flooding feeds with authentic clips, word-of-mouth momentum, and engagement you can actually measure.</p>
+                <a href="#contact" class="btn btn-primary">Start a campaign</a>
+                <div class="hero-stats" id="heroStats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-value" data-target="10" data-suffix="M+">0</span>
+                        <span class="hero-stat-label">Organic views</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value" data-target="50" data-suffix="+">0</span>
+                        <span class="hero-stat-label">Film campaigns</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value" data-target="500" data-suffix="+">0</span>
+                        <span class="hero-stat-label">Creator posts</span>
+                    </div>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-value">50+</span>
-                    <span class="hero-stat-label">Film campaigns</span>
+            </div>
+        </section>
+
+        <section class="work work--featured" id="work">
+            <div class="container">
+                <h2 class="section-heading">Featured campaigns</h2>
+                <p class="section-hint">Hover over a poster for stats</p>
+
+                <div class="featured-grid">
+                    <article class="campaign-card campaign-card--featured" tabindex="0"
+                        data-posts="127 posts" data-views="2.4M views" data-engagement="12% engagement">
+                        <div class="campaign-poster-wrap">
+                            <div class="campaign-poster">
+                                <img src="assets/images/campaigns/osiris.jpg" alt="Osiris movie poster" loading="lazy">
+                                <div class="campaign-stats" aria-hidden="true">
+                                    <span class="stat-line">127 posts</span>
+                                    <span class="stat-line">2.4M views</span>
+                                    <span class="stat-line">12% engagement</span>
+                                </div>
+                            </div>
+                            <div class="campaign-sand" aria-hidden="true"></div>
+                        </div>
+                        <h3 class="campaign-title">Osiris</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--featured" tabindex="0"
+                        data-posts="98 content" data-views="3.75M views" data-engagement="7.3% engagement">
+                        <div class="campaign-poster-wrap">
+                            <div class="campaign-poster">
+                                <img src="assets/images/campaigns/undercard.jpg" alt="Undercard movie poster" loading="lazy">
+                                <div class="campaign-stats" aria-hidden="true">
+                                    <span class="stat-line">98 content</span>
+                                    <span class="stat-line">3.75M views</span>
+                                    <span class="stat-line">7.3% engagement</span>
+                                </div>
+                            </div>
+                            <div class="campaign-sand" aria-hidden="true"></div>
+                        </div>
+                        <h3 class="campaign-title">Undercard</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--featured" tabindex="0"
+                        data-posts="70 content" data-views="400K views" data-engagement="13.9% engagement">
+                        <div class="campaign-poster-wrap">
+                            <div class="campaign-poster">
+                                <img src="assets/images/campaigns/erupcja.jpg" alt="Erupcja movie poster" loading="lazy">
+                                <div class="campaign-stats" aria-hidden="true">
+                                    <span class="stat-line">70 content</span>
+                                    <span class="stat-line">400K views</span>
+                                    <span class="stat-line">13.9% engagement</span>
+                                </div>
+                            </div>
+                            <div class="campaign-sand" aria-hidden="true"></div>
+                        </div>
+                        <h3 class="campaign-title">Erupcja</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--featured" tabindex="0"
+                        data-posts="88 posts" data-views="3.7M views" data-engagement="10.1% engagement">
+                        <div class="campaign-poster-wrap">
+                            <div class="campaign-poster">
+                                <img src="assets/images/campaigns/kraken.jpg" alt="Kraken movie poster" loading="lazy">
+                                <div class="campaign-stats" aria-hidden="true">
+                                    <span class="stat-line">88 posts</span>
+                                    <span class="stat-line">3.7M views</span>
+                                    <span class="stat-line">10.1% engagement</span>
+                                </div>
+                            </div>
+                            <div class="campaign-sand" aria-hidden="true"></div>
+                        </div>
+                        <h3 class="campaign-title">Kraken</h3>
+                    </article>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-value">500+</span>
-                    <span class="hero-stat-label">Creator posts</span>
+            </div>
+        </section>
+    </div>
+
+    <div class="calm-zone">
+        <section class="work work--more">
+            <div class="container">
+                <h2 class="section-heading section-heading--secondary">More campaigns</h2>
+
+                <div class="campaign-grid">
+                    <article class="campaign-card campaign-card--compact" tabindex="0">
+                        <div class="campaign-poster">
+                            <img src="assets/images/campaigns/fight-or-flight.jpg" alt="Fight or Flight movie poster" loading="lazy">
+                        </div>
+                        <h3 class="campaign-title">Fight or Flight</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--compact" tabindex="0">
+                        <div class="campaign-poster">
+                            <img src="assets/images/campaigns/the-surfer.jpg" alt="The Surfer movie poster" loading="lazy">
+                        </div>
+                        <h3 class="campaign-title">The Surfer</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--compact" tabindex="0">
+                        <div class="campaign-poster">
+                            <img src="assets/images/campaigns/bob-trevino-likes-it.jpg" alt="Bob Trevino Likes It movie poster" loading="lazy">
+                        </div>
+                        <h3 class="campaign-title">Bob Trevino Likes It</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--compact" tabindex="0">
+                        <div class="campaign-poster">
+                            <img src="assets/images/campaigns/the-wrecker.jpg" alt="The Wrecker movie poster" loading="lazy">
+                        </div>
+                        <h3 class="campaign-title">The Wrecker</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--compact" tabindex="0">
+                        <div class="campaign-poster">
+                            <img src="assets/images/campaigns/glhfdd.jpg" alt="Good Luck Have Fun Don't Die movie poster" loading="lazy">
+                        </div>
+                        <h3 class="campaign-title">GLHFDD</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--compact" tabindex="0">
+                        <div class="campaign-poster">
+                            <img src="assets/images/campaigns/thwnht.jpg" alt="The House Was Not Hungry Then movie poster" loading="lazy">
+                        </div>
+                        <h3 class="campaign-title">The House Was Not Hungry Then</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--compact" tabindex="0">
+                        <div class="campaign-poster">
+                            <img src="assets/images/campaigns/operation-taco-garys.jpg" alt="Operation Taco Gary's movie poster" loading="lazy">
+                        </div>
+                        <h3 class="campaign-title">Operation Taco Gary's</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--compact" tabindex="0">
+                        <div class="campaign-poster">
+                            <img src="assets/images/campaigns/decibel.jpg" alt="Decibel movie poster" loading="lazy">
+                        </div>
+                        <h3 class="campaign-title">Decibel</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--compact" tabindex="0">
+                        <div class="campaign-poster">
+                            <img src="assets/images/campaigns/turbulence.jpg" alt="Turbulence movie poster" loading="lazy">
+                        </div>
+                        <h3 class="campaign-title">Turbulence</h3>
+                    </article>
+
+                    <article class="campaign-card campaign-card--compact" tabindex="0">
+                        <div class="campaign-poster">
+                            <img src="assets/images/campaigns/lazarus-the-awakening.jpg" alt="Lazarus The Awakening movie poster" loading="lazy">
+                        </div>
+                        <h3 class="campaign-title">Lazarus: The Awakening</h3>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="work" id="work">
-        <div class="container">
-            <h2 class="section-heading">Featured campaigns</h2>
-            <p class="section-hint">Hover over a poster for stats</p>
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-heading">Our services</h2>
+                <p class="section-intro">Viral content, strategic creator partnerships, and data-driven campaigns built for theatrical and streaming windows.</p>
 
-            <div class="featured-grid">
-                <article class="campaign-card campaign-card--featured" tabindex="0"
-                    data-posts="127 posts" data-views="2.4M views" data-engagement="12% engagement">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/osiris.jpg" alt="Osiris movie poster" loading="lazy">
-                        <div class="campaign-stats" aria-hidden="true">
-                            <span class="stat-line">127 posts</span>
-                            <span class="stat-line">2.4M views</span>
-                            <span class="stat-line">12% engagement</span>
-                        </div>
-                    </div>
-                    <h3 class="campaign-title">Osiris</h3>
-                </article>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <h3 class="service-title">Micro-influencer organic word of mouth</h3>
+                        <ul class="service-list">
+                            <li>Flood TikTok and Reels with hundreds of organic clips, not ads</li>
+                            <li>Evergreen assets that live across multiple release windows</li>
+                            <li>Transparent reporting with platform APIs to track real performance</li>
+                        </ul>
+                    </article>
 
-                <article class="campaign-card campaign-card--featured" tabindex="0"
-                    data-posts="98 content" data-views="3.75M views" data-engagement="7.3% engagement">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/undercard.jpg" alt="Undercard movie poster" loading="lazy">
-                        <div class="campaign-stats" aria-hidden="true">
-                            <span class="stat-line">98 content</span>
-                            <span class="stat-line">3.75M views</span>
-                            <span class="stat-line">7.3% engagement</span>
-                        </div>
-                    </div>
-                    <h3 class="campaign-title">Undercard</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--featured" tabindex="0"
-                    data-posts="70 content" data-views="400K views" data-engagement="13.9% engagement">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/erupcja.jpg" alt="Erupcja movie poster" loading="lazy">
-                        <div class="campaign-stats" aria-hidden="true">
-                            <span class="stat-line">70 content</span>
-                            <span class="stat-line">400K views</span>
-                            <span class="stat-line">13.9% engagement</span>
-                        </div>
-                    </div>
-                    <h3 class="campaign-title">Erupcja</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--featured" tabindex="0"
-                    data-posts="88 posts" data-views="3.7M views" data-engagement="10.1% engagement">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/kraken.jpg" alt="Kraken movie poster" loading="lazy">
-                        <div class="campaign-stats" aria-hidden="true">
-                            <span class="stat-line">88 posts</span>
-                            <span class="stat-line">3.7M views</span>
-                            <span class="stat-line">10.1% engagement</span>
-                        </div>
-                    </div>
-                    <h3 class="campaign-title">Kraken</h3>
-                </article>
+                    <article class="service-card">
+                        <h3 class="service-title">Viral clipping content</h3>
+                        <p class="service-desc">In-house creative built for the scroll: trend-driven edits, scene selects, and fan-edit formats designed to drive organic discovery.</p>
+                        <ul class="service-list">
+                            <li>Trend-driven creative direction</li>
+                            <li>Scene selects optimized for shareability</li>
+                            <li>Campaigns tailored to cast and genre</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <h2 class="section-heading section-heading--secondary">More campaigns</h2>
-
-            <div class="campaign-grid">
-                <article class="campaign-card campaign-card--compact" tabindex="0">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/fight-or-flight.jpg" alt="Fight or Flight movie poster" loading="lazy">
-                    </div>
-                    <h3 class="campaign-title">Fight or Flight</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--compact" tabindex="0">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/the-surfer.jpg" alt="The Surfer movie poster" loading="lazy">
-                    </div>
-                    <h3 class="campaign-title">The Surfer</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--compact" tabindex="0">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/bob-trevino-likes-it.jpg" alt="Bob Trevino Likes It movie poster" loading="lazy">
-                    </div>
-                    <h3 class="campaign-title">Bob Trevino Likes It</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--compact" tabindex="0">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/the-wrecker.jpg" alt="The Wrecker movie poster" loading="lazy">
-                    </div>
-                    <h3 class="campaign-title">The Wrecker</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--compact" tabindex="0">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/glhfdd.jpg" alt="Good Luck Have Fun Don't Die movie poster" loading="lazy">
-                    </div>
-                    <h3 class="campaign-title">GLHFDD</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--compact" tabindex="0">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/thwnht.jpg" alt="The House Was Not Hungry Then movie poster" loading="lazy">
-                    </div>
-                    <h3 class="campaign-title">The House Was Not Hungry Then</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--compact" tabindex="0">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/operation-taco-garys.jpg" alt="Operation Taco Gary's movie poster" loading="lazy">
-                    </div>
-                    <h3 class="campaign-title">Operation Taco Gary's</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--compact" tabindex="0">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/decibel.jpg" alt="Decibel movie poster" loading="lazy">
-                    </div>
-                    <h3 class="campaign-title">Decibel</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--compact" tabindex="0">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/turbulence.jpg" alt="Turbulence movie poster" loading="lazy">
-                    </div>
-                    <h3 class="campaign-title">Turbulence</h3>
-                </article>
-
-                <article class="campaign-card campaign-card--compact" tabindex="0">
-                    <div class="campaign-poster">
-                        <img src="assets/images/campaigns/lazarus-the-awakening.jpg" alt="Lazarus The Awakening movie poster" loading="lazy">
-                    </div>
-                    <h3 class="campaign-title">Lazarus: The Awakening</h3>
-                </article>
+        <section class="clients" id="clients">
+            <div class="container">
+                <h2 class="section-heading">Clients</h2>
+                <div class="clients-row">
+                    <a href="https://www.briarcliffentertainment.com/" target="_blank" rel="noopener noreferrer" class="client-logo">
+                        <img src="assets/images/clients/briarcliff.png" alt="Briarcliff Entertainment" loading="lazy">
+                    </a>
+                    <a href="https://www.vert-ent.com/" target="_blank" rel="noopener noreferrer" class="client-logo">
+                        <img src="assets/images/clients/vertical.png" alt="Vertical Entertainment" loading="lazy">
+                    </a>
+                    <a href="https://www.itnfilms.net/" target="_blank" rel="noopener noreferrer" class="client-logo">
+                        <img src="assets/images/clients/itn-studios.jpg" alt="ITN Studios" loading="lazy">
+                    </a>
+                    <a href="https://www.12special.com/" target="_blank" rel="noopener noreferrer" class="client-logo">
+                        <img src="assets/images/clients/12special.png" alt="12 Special" loading="lazy">
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-heading">Our services</h2>
-            <p class="section-intro">Viral content, strategic creator partnerships, and data-driven campaigns built for theatrical and streaming windows.</p>
+        <section class="contact" id="contact">
+            <div class="container contact-inner">
+                <h2 class="section-heading">Reach out for a tailored strategy</h2>
+                <p class="contact-lead">Tell us about your film. We'll design a creator campaign around your release window, audience, and goals.</p>
 
-            <div class="services-grid">
-                <article class="service-card">
-                    <h3 class="service-title">Micro-influencer organic word of mouth</h3>
-                    <ul class="service-list">
-                        <li>Flood TikTok and Reels with hundreds of organic clips — not ads</li>
-                        <li>Content that doesn't kill engagement with forced #ad disclosures</li>
-                        <li>Evergreen assets that live across multiple release windows</li>
-                        <li>Transparent reporting with platform APIs to track real performance</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <h3 class="service-title">Viral clipping content</h3>
-                    <p class="service-desc">In-house creative built for the scroll — trend-driven edits, scene selects, and fan-edit formats designed to drive organic discovery.</p>
-                    <ul class="service-list">
-                        <li>Trend-driven creative direction</li>
-                        <li>Scene selects optimized for shareability</li>
-                        <li>Campaigns tailored to cast and genre</li>
-                    </ul>
-                </article>
+                <div class="clamshell-contact" id="clamshellContact">
+                    <button type="button" class="clamshell-trigger" id="clamshellTrigger" aria-expanded="false" aria-controls="clamshellReveal">
+                        <span class="clamshell-shell" aria-hidden="true">
+                            <span class="clamshell-half clamshell-half--top"></span>
+                            <span class="clamshell-half clamshell-half--bottom"></span>
+                            <span class="clamshell-pearl"></span>
+                        </span>
+                        <span class="clamshell-prompt">Open clamshell for email</span>
+                    </button>
+                    <div class="clamshell-reveal" id="clamshellReveal" hidden>
+                        <a href="mailto:aaron@pixelscene.media" class="clamshell-email">aaron@pixelscene.media</a>
+                        <button type="button" class="clamshell-copy" id="copyEmailBtn">Copy email</button>
+                        <span class="clamshell-copy-feedback" id="copyFeedback" aria-live="polite"></span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="clients" id="clients">
-        <div class="container">
-            <h2 class="section-heading">Clients</h2>
-            <div class="clients-row">
-                <a href="https://www.briarcliffentertainment.com/" target="_blank" rel="noopener noreferrer" class="client-logo">
-                    <img src="assets/images/clients/briarcliff.png" alt="Briarcliff Entertainment" loading="lazy">
-                </a>
-                <a href="https://www.vert-ent.com/" target="_blank" rel="noopener noreferrer" class="client-logo">
-                    <img src="assets/images/clients/vertical.png" alt="Vertical Entertainment" loading="lazy">
-                </a>
-                <a href="https://www.itnfilms.net/" target="_blank" rel="noopener noreferrer" class="client-logo">
-                    <img src="assets/images/clients/itn-studios.jpg" alt="ITN Studios" loading="lazy">
-                </a>
-                <a href="https://www.12special.com/" target="_blank" rel="noopener noreferrer" class="client-logo">
-                    <img src="assets/images/clients/12special.png" alt="12 Special" loading="lazy">
-                </a>
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-brand">Briefly Obsessed</p>
+                <p class="footer-tagline">Organic film marketing &amp; creator campaigns</p>
+                <p class="footer-note">Aaron Briggs also works in theater and on-camera performance.</p>
+                <p class="footer-copyright">&copy; 2026 Briefly Obsessed. All rights reserved.</p>
             </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container contact-inner">
-            <h2 class="section-heading">Reach out for a tailored strategy</h2>
-            <p class="contact-lead">Tell us about your film — we'll design a creator campaign around your release window, audience, and goals.</p>
-            <a href="mailto:aaron@pixelscene.media" class="contact-email">aaron@pixelscene.media</a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-brand">Briefly Obsessed</p>
-            <p class="footer-tagline">Organic film marketing &amp; creator campaigns</p>
-            <p class="footer-note">Aaron Briggs also works in theater and on-camera performance.</p>
-            <p class="footer-copyright">&copy; 2026 Briefly Obsessed. All rights reserved.</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script src="assets/js/main.js"></script>
 </body>
