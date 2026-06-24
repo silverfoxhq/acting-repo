@@ -1,46 +1,34 @@
 /**
- * Add Briggs Portfolio - Main JavaScript
- * Handles navigation, animations, lightbox, and interactions
+ * Briefly Obsessed — Main JavaScript
+ * Navigation, scroll effects, campaign stat overlays, reveal animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
-    initScrollEffects();
-    initLightbox();
+    initCampaignStats();
     initScrollReveal();
     initSmoothScroll();
 });
 
-/**
- * Navigation functionality
- */
 function initNavigation() {
     const nav = document.getElementById('nav');
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
 
-    // Scroll effect for navigation
-    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        // Add scrolled class when past hero
-        if (currentScroll > 100) {
+        if (window.pageYOffset > 50) {
             nav.classList.add('scrolled');
         } else {
             nav.classList.remove('scrolled');
         }
-
-        lastScroll = currentScroll;
+        updateActiveNavLink();
     });
 
-    // Mobile menu toggle
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
     });
 
-    // Close mobile menu on link click
     navMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
@@ -48,7 +36,6 @@ function initNavigation() {
         });
     });
 
-    // Close mobile menu on outside click
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && navMenu.classList.contains('active')) {
             navMenu.classList.remove('active');
@@ -58,202 +45,91 @@ function initNavigation() {
 }
 
 /**
- * Scroll-based effects and parallax
+ * Mobile tap fallback for hover stat overlays on featured campaigns
  */
-function initScrollEffects() {
-    const hero = document.querySelector('.hero');
-    const heroContent = document.querySelector('.hero-content');
-    const scrollIndicator = document.querySelector('.scroll-indicator');
+function initCampaignStats() {
+    const featuredCards = document.querySelectorAll('.campaign-card--featured');
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
 
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const heroHeight = hero.offsetHeight;
+    if (!isTouchDevice) return;
 
-        // Parallax effect on hero content
-        if (scrolled < heroHeight) {
-            const parallaxValue = scrolled * 0.3;
-            const opacityValue = 1 - (scrolled / heroHeight) * 1.5;
+    featuredCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const wasActive = card.classList.contains('is-active');
 
-            heroContent.style.transform = `translateY(${parallaxValue}px)`;
-            heroContent.style.opacity = Math.max(0, opacityValue);
+            featuredCards.forEach(c => c.classList.remove('is-active'));
 
-            // Fade out scroll indicator
-            if (scrollIndicator) {
-                scrollIndicator.style.opacity = Math.max(0, 1 - (scrolled / 200));
+            if (!wasActive) {
+                card.classList.add('is-active');
             }
-        }
-    });
-}
-
-/**
- * Lightbox for campaign examples
- */
-function initLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = lightbox.querySelector('.lightbox-image');
-    const lightboxClose = lightbox.querySelector('.lightbox-close');
-    const campaignCards = document.querySelectorAll('.campaign-card');
-
-    // Open lightbox on campaign card click - show example image
-    campaignCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const exampleSrc = card.dataset.example;
-            const filmName = card.querySelector('.campaign-info h4').textContent;
-            lightboxImage.src = exampleSrc;
-            lightboxImage.alt = filmName + ' - Example';
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
         });
     });
 
-    // Close lightbox functions
-    function closeLightbox() {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    lightboxClose.addEventListener('click', closeLightbox);
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
-    });
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-            closeLightbox();
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.campaign-card--featured')) {
+            featuredCards.forEach(c => c.classList.remove('is-active'));
         }
     });
 }
 
-/**
- * Scroll reveal animations
- */
 function initScrollReveal() {
-    // Add reveal class to elements
     const revealElements = document.querySelectorAll(
-        '.about-content, .campaign-card, .credits-section, .skill-card, .contact-method, .contact-form'
+        '.campaign-card, .service-card, .client-logo, .hero-stat'
     );
 
-    revealElements.forEach(el => {
-        el.classList.add('reveal');
-    });
-
-    // Intersection Observer for reveal animations
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+    revealElements.forEach(el => el.classList.add('reveal'));
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add stagger delay for grid items
                 const parent = entry.target.parentElement;
-                if (parent && parent.classList.contains('campaign-grid') ||
-                    parent && parent.classList.contains('skills-grid') ||
-                    parent && parent.classList.contains('performance-content')) {
+                if (parent && (
+                    parent.classList.contains('featured-grid') ||
+                    parent.classList.contains('campaign-grid') ||
+                    parent.classList.contains('services-grid') ||
+                    parent.classList.contains('clients-row') ||
+                    parent.classList.contains('hero-stats')
+                )) {
                     const siblings = Array.from(parent.children);
                     const index = siblings.indexOf(entry.target);
-                    entry.target.style.transitionDelay = `${index * 0.1}s`;
+                    entry.target.style.transitionDelay = `${index * 0.06}s`;
                 }
 
                 entry.target.classList.add('revealed');
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
     revealElements.forEach(el => observer.observe(el));
 }
 
-/**
- * Smooth scroll for anchor links
- */
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
+            if (!target) return;
 
-            if (target) {
-                const navHeight = document.getElementById('nav').offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+            const navHeight = document.getElementById('nav').offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         });
     });
 }
 
-/**
- * Form submission handling
- */
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-
-        // Get form data
-        const formData = new FormData(contactForm);
-
-        try {
-            const response = await fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                submitBtn.textContent = 'Message Sent!';
-                submitBtn.style.backgroundColor = '#22c55e';
-                contactForm.reset();
-
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.style.backgroundColor = '';
-                    submitBtn.disabled = false;
-                }, 3000);
-            } else {
-                throw new Error('Form submission failed');
-            }
-        } catch (error) {
-            submitBtn.textContent = 'Error - Try Again';
-            submitBtn.style.backgroundColor = '#ef4444';
-
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.backgroundColor = '';
-                submitBtn.disabled = false;
-            }, 3000);
-        }
-    });
-}
-
-/**
- * Active navigation link highlighting
- */
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-
+    const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
     let currentSection = '';
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 150;
+        const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.offsetHeight;
         const scrollPosition = window.pageYOffset;
 
@@ -270,11 +146,8 @@ function updateActiveNavLink() {
     });
 }
 
-window.addEventListener('scroll', updateActiveNavLink);
-
-/**
- * Image loading optimization
- */
-document.querySelectorAll('img').forEach(img => {
-    img.loading = 'lazy';
+document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+    if (!img.hasAttribute('loading')) {
+        img.loading = 'lazy';
+    }
 });
