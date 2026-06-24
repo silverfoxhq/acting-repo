@@ -19,8 +19,6 @@ function prefersReducedMotion() {
 
 function initNavigation() {
     const nav = document.getElementById('nav');
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
 
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 50) {
@@ -41,25 +39,6 @@ function initNavigation() {
 
         updateActiveNavLink();
     }, { passive: true });
-
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
-    });
-
-    navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
-        });
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
-        }
-    });
 }
 
 function initCampaignStats() {
