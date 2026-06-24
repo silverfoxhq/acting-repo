@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Briefly Obsessed, organic film marketing and creator campaigns for indie and studio releases. Word-of-mouth buzz, viral clipping, measurable engagement.">
+    <meta name="description" content="BrieflyObsessed, organic film marketing and creator campaigns for indie and studio releases. Word-of-mouth buzz, viral clipping, measurable engagement.">
     <meta name="keywords" content="film marketing, movie marketing, organic social, influencer marketing, clipping content, indie film">
-    <meta name="author" content="Briefly Obsessed">
+    <meta name="author" content="BrieflyObsessed">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Briefly Obsessed | Organic Film Marketing">
+    <meta property="og:title" content="BrieflyObsessed | Organic Film Marketing">
     <meta property="og:description" content="Creator-driven campaigns that turn films into conversation. Organic buzz, viral clipping, measurable engagement.">
     <meta property="og:image" content="assets/images/campaigns/osiris.jpg">
     <meta property="og:url" content="https://brieflyobsessed.com">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Briefly Obsessed | Organic Film Marketing">
+    <meta name="twitter:title" content="BrieflyObsessed | Organic Film Marketing">
     <meta name="twitter:description" content="Creator-driven campaigns that turn films into conversation.">
-    <title>Briefly Obsessed | Organic Film Marketing</title>
+    <title>BrieflyObsessed | Organic Film Marketing</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -27,33 +27,47 @@
 
         <nav class="nav" id="nav">
             <div class="nav-container">
-                <a href="#hero" class="nav-logo">Briefly Obsessed</a>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#clients">Clients</a></li>
-                    <li><a href="#contact" class="nav-cta">Contact</a></li>
-                </ul>
+                <a href="#hero" class="nav-logo">BrieflyObsessed</a>
+                <div class="nav-end">
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#contact" class="nav-cta">Contact</a></li>
+                    </ul>
+                    <img
+                        src="assets/images/logo.png"
+                        alt="BrieflyObsessed"
+                        class="nav-logo-img"
+                        width="48"
+                        height="48"
+                        onerror="this.hidden=true"
+                    >
+                </div>
             </div>
         </nav>
 
         <section class="hero" id="hero">
             <div class="container hero-inner">
                 <p class="hero-eyebrow">Film marketing agency</p>
-                <h1 class="hero-title">Turn your film into<br>the thing people<br>can't stop talking about.</h1>
-                <p class="hero-lead">Briefly Obsessed builds organic creator campaigns for indie and studio releases, flooding feeds with authentic clips, word-of-mouth momentum, and engagement you can actually measure.</p>
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Turn your film into</span>
+                    <span class="hero-title-line">the thing people can't</span>
+                    <span class="hero-line hero-line-3"><span class="hero-line-normal">stop </span><span class="hero-line-emphasis">talking about.</span></span>
+                </h1>
+                <p class="hero-lead">BrieflyObsessed builds organic creator campaigns for indie and studio releases, flooding feeds with authentic clips, word-of-mouth momentum, and engagement you can actually measure.</p>
                 <a href="#contact" class="btn btn-primary">Start a campaign</a>
                 <div class="hero-stats" id="heroStats">
                     <div class="hero-stat">
-                        <span class="hero-stat-value" data-target="10" data-suffix="M+">0</span>
+                        <span class="hero-stat-value" data-value="10" data-suffix="M+">0</span>
                         <span class="hero-stat-label">Organic views</span>
                     </div>
                     <div class="hero-stat">
-                        <span class="hero-stat-value" data-target="50" data-suffix="+">0</span>
+                        <span class="hero-stat-value" data-value="25" data-suffix="+">0</span>
                         <span class="hero-stat-label">Film campaigns</span>
                     </div>
                     <div class="hero-stat">
-                        <span class="hero-stat-value" data-target="500" data-suffix="+">0</span>
+                        <span class="hero-stat-value" data-value="500" data-suffix="+">0</span>
                         <span class="hero-stat-label">Creator posts</span>
                     </div>
                 </div>
@@ -273,12 +287,11 @@
                             <span class="clamshell-half clamshell-half--bottom"></span>
                             <span class="clamshell-pearl"></span>
                         </span>
-                        <span class="clamshell-prompt">Open clamshell for email</span>
+                        <span class="clamshell-prompt">Open the shell</span>
                     </button>
-                    <div class="clamshell-reveal" id="clamshellReveal" hidden>
+                    <div class="clamshell-reveal" id="clamshellReveal" aria-hidden="true">
                         <a href="mailto:aaron@pixelscene.media" class="clamshell-email">aaron@pixelscene.media</a>
-                        <button type="button" class="clamshell-copy" id="copyEmailBtn">Copy email</button>
-                        <span class="clamshell-copy-feedback" id="copyFeedback" aria-live="polite"></span>
+                        <button type="button" class="clamshell-copy" id="copyEmailBtn" aria-label="Copy email address">Copy</button>
                     </div>
                 </div>
             </div>
@@ -286,10 +299,10 @@
 
         <footer class="footer">
             <div class="container">
-                <p class="footer-brand">Briefly Obsessed</p>
+                <p class="footer-brand">BrieflyObsessed</p>
                 <p class="footer-tagline">Organic film marketing &amp; creator campaigns</p>
                 <p class="footer-note">Aaron Briggs also works in theater and on-camera performance.</p>
-                <p class="footer-copyright">&copy; 2026 Briefly Obsessed. All rights reserved.</p>
+                <p class="footer-copyright">&copy; 2026 BrieflyObsessed. All rights reserved.</p>
             </div>
         </footer>
     </div>
